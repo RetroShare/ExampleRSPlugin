@@ -1,0 +1,11 @@
+/**
+@brief Documentation for the RetroShare Chatserver Sources
+@author chozabu & cave
+@file
+*/
+/** @defgroup RetroShare */
+/**
+@mainpage RetroShare Example Plugin
+This guide should help you to create your own Plugin. 
+It should point you to the direction how to untangle the code and run some networking. 
+*/
