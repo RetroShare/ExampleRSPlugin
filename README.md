@@ -31,4 +31,4 @@ To use as a basis for your own plugins you can run
     ./rename_plugin.sh NewPluginName
 
 This will replace all instances of "NetExample" with "NewPluginName"
-you must also change the plugins ID from b00b5 to a number of your choosing.
+you must also change the plugins ID from 12345 to a number of your choosing.
