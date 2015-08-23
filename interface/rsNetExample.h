@@ -34,15 +34,28 @@
 class RsNetExample ;
 extern RsNetExample *rsNetExample;
  
+//TODO explain this const
 static const uint32_t CONFIG_TYPE_NetExample_PLUGIN 		= 0xe001 ;
 
 class RsNetExample
 {
 	public:
 
+	//not fully implemented
 	virtual void ping_all() = 0;
+
+	//broadcasts json packets with some x/y coords for painting
 	virtual void broadcast_paint(int x, int y) = 0;
+
+	//broadcasts json packets with some text coords for chatting
 	virtual void msg_all(std::string msg) = 0;
+
+	//send data to a peer using your own serialisation
+	virtual void raw_msg_peer(RsPeerId peerID, std::string msg) = 0;
+
+	//convenience functions
+	//virtual void str_msg_peer(RsPeerId peerID, QString strdata) = 0;
+	//virtual void 	qvm_msg_peer(RsPeerId peerID, QVariantMap data) = 0;
 };
 
 
