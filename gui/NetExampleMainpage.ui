@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>NEMainpage</class>
- <widget class="QWidget" name="NEMainpage">
+ <class>NetExampleMainpage</class>
+ <widget class="QWidget" name="NetExampleMainpage">
   <property name="geometry">
    <rect>
     <x>0</x>

@@ -29,7 +29,7 @@
 
 #include "NetExamplePlugin.h"
 #include "interface/rsNetExample.h"
-#include "gui/NEMainpage.h"
+#include "gui/NetExampleMainpage.h"
 #include "gui/NetExampleNotify.h"
 
 
@@ -162,8 +162,8 @@ QIcon *NetExamplePlugin::qt_icon() const
 MainPage *NetExamplePlugin::qt_page() const
 {
 	if(mainpage == NULL){
-		mainpage = new NEMainpage(0, mNetExampleNotify);//mPeers, mFiles) ;
-		//tpage = new NEMainpage( );
+		mainpage = new NetExampleMainpage(0, mNetExampleNotify);//mPeers, mFiles) ;
+		//tpage = new NetExampleMainpage( );
 		//mainpage = tpage;
 	}
 

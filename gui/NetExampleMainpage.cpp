@@ -1,14 +1,14 @@
-#include "NEMainpage.h"
-#include "ui_NEMainpage.h"
+#include "NetExampleMainpage.h"
+#include "ui_NetExampleMainpage.h"
 //#include "services/p3NetExample.h"
 #include "interface/rsNetExample.h"
 #include<qjsondocument.h>
 
 
-NEMainpage::NEMainpage(QWidget *parent, NetExampleNotify *notify) :
+NetExampleMainpage::NetExampleMainpage(QWidget *parent, NetExampleNotify *notify) :
 	MainPage(parent),
 	mNotify(notify),
-	ui(new Ui::NEMainpage)
+	ui(new Ui::NetExampleMainpage)
 {
 	ui->setupUi(this);
 
@@ -19,24 +19,24 @@ NEMainpage::NEMainpage(QWidget *parent, NetExampleNotify *notify) :
 
 }
 
-NEMainpage::~NEMainpage()
+NetExampleMainpage::~NetExampleMainpage()
 {
 	delete ui;
 }
 
-void NEMainpage::mmEvent(int x, int y)
+void NetExampleMainpage::mmEvent(int x, int y)
 {
 	rsNetExample->broadcast_paint(x,y);
 }
 
-void NEMainpage::on_pingAllButton_clicked()
+void NetExampleMainpage::on_pingAllButton_clicked()
 {
 	rsNetExample->ping_all();
 	NeMsgArrived(rsPeers->getOwnId(),"ping");
 }
 
 
-void NEMainpage::NeMsgArrived(const RsPeerId &peer_id, QString str)
+void NetExampleMainpage::NeMsgArrived(const RsPeerId &peer_id, QString str)
 {
 	QJsonDocument jdoc = QJsonDocument::fromJson(str.toUtf8());
 	QVariantMap vmap = jdoc.toVariant().toMap();
@@ -67,7 +67,7 @@ void NEMainpage::NeMsgArrived(const RsPeerId &peer_id, QString str)
 		ui->netLogWidget->addItem(output);
 	}
 }
-void NEMainpage::NePaintArrived(const RsPeerId &peer_id, int x, int y)
+void NetExampleMainpage::NePaintArrived(const RsPeerId &peer_id, int x, int y)
 {
 
 	std::cout << "GUI got Paint from: " << peer_id;
@@ -76,7 +76,7 @@ void NEMainpage::NePaintArrived(const RsPeerId &peer_id, int x, int y)
 	ui->paintWidget->paintAt(x,y);
 }
 
-void NEMainpage::on_broadcastButton_clicked()
+void NetExampleMainpage::on_broadcastButton_clicked()
 {
 	rsNetExample->msg_all(ui->msgInput->text().toStdString());
 	NeMsgArrived(rsPeers->getOwnId(),ui->msgInput->text());

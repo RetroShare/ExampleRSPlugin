@@ -27,7 +27,7 @@
 /*libretroshare"*/
 #include <retroshare/rsplugin.h>
 
-#include "gui/NEMainpage.h"
+#include "gui/NetExampleMainpage.h"
 
 class NetExampleGUIHandler ;
 class NetExampleNotify ;

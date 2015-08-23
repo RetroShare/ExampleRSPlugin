@@ -12,16 +12,16 @@
 #include <QWidget>
 
 namespace Ui {
-class NEMainpage;
+class NetExampleMainpage;
 }
 
-class NEMainpage : public MainPage
+class NetExampleMainpage : public MainPage
 {
 	Q_OBJECT
 
 public:
-	explicit NEMainpage(QWidget *parent, NetExampleNotify *notify);
-	~NEMainpage();
+	explicit NetExampleMainpage(QWidget *parent, NetExampleNotify *notify);
+	~NetExampleMainpage();
 
 private slots:
 	void mmEvent(int x, int y);
@@ -32,7 +32,7 @@ private slots:
 
 	void NePaintArrived(const RsPeerId &peer_id, int x, int y);
 private:
-	Ui::NEMainpage *ui;
+	Ui::NetExampleMainpage *ui;
 	NetExampleNotify *mNotify;
 };
 

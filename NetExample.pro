@@ -36,7 +36,7 @@ QMAKE_CXXFLAGS *= -Wall
 SOURCES = NetExamplePlugin.cpp               \
           services/p3NetExample.cc           \
           services/rsNetExampleItems.cc \
-    gui/NEMainpage.cpp \
+    gui/NetExampleMainpage.cpp \
     gui/NetExampleNotify.cpp \
     gui/paintwidget.cpp
 
@@ -44,7 +44,7 @@ HEADERS = NetExamplePlugin.h                 \
           services/p3NetExample.h            \
           services/rsNetExampleItems.h       \
           interface/rsNetExample.h \
-    gui/NEMainpage.h \
+    gui/NetExampleMainpage.h \
     gui/NetExampleNotify.h \
     gui/paintwidget.h
 
@@ -58,4 +58,4 @@ RESOURCES = gui/NetExample_images.qrc
 LIBS += -lspeex -lspeexdsp
 
 FORMS += \
-    gui/NEMainpage.ui
+    gui/NetExampleMainpage.ui
