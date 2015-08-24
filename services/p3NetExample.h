@@ -38,10 +38,10 @@ class NetExampleNotify ;
 
 
 
-//!The RS VoIP Test service.
+//!The RS NetExample service.
  /**
   *
-  * This is only used to test Latency for the moment.
+  * This is sends data to friends.
   */
 
 class p3NetExample: public RsPQIService, public RsNetExample
