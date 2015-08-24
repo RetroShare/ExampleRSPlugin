@@ -33,7 +33,7 @@
 #include "gui/NetExampleNotify.h"
 
 
-#define IMAGE_NetExample ":/images/talking_on.svg"
+#define IMAGE_NetExample ":/images/Oxygen-plugin.ico"
 
 static void *inited = new NetExamplePlugin() ;
 
