@@ -15,6 +15,7 @@ MOBILITY = multimedia
 
 DEPENDPATH += ../../retroshare-gui/src/temp/ui ../../libretroshare/src
 INCLUDEPATH += ../../retroshare-gui/src/temp/ui ../../libretroshare/src
+INCLUDEPATH += ../../rapidjson-1.1.0
 
 #################################### Windows #####################################
 

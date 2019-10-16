@@ -29,7 +29,7 @@
 #include "services/rsNetExampleItems.h"
 #include "services/p3service.h"
 #include "serialiser/rstlvbase.h"
-#include "serialiser/rsconfigitems.h"
+#include "rsitems/rsconfigitems.h"
 #include "plugins/rspqiservice.h"
 #include <interface/rsNetExample.h>
 
